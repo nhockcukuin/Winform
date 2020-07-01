@@ -51,7 +51,7 @@ namespace ProjectCLB
         {
             MainFrm main = new MainFrm();
             LoginFrm lg = new LoginFrm();
-            main.Hide();
+            ((Form)this.TopLevelControl).Close();
             lg.Show();
         }
 
@@ -61,7 +61,7 @@ namespace ProjectCLB
             string email = this.tbxEmailI.Text;
             string sdt = this.tbxNbPhoneI.Text;
             string name = this.tbxNameI.Text;
-            string query2 = "update TAIKHOAN set MATKHAU='"+pw+"', EMAIL='"+email+"',SDT='"+sdt+"',HOTEN='"+name+"'";
+            string query2 = "update TAIKHOAN set MATKHAU='"+pw+"', EMAIL='"+email+"',SDT='"+sdt+"',HOTEN=N'"+name+"'";
             cn.Open();
             SqlCommand cmd = new SqlCommand(query2, cn);
             SqlDataReader data = cmd.ExecuteReader();
@@ -79,6 +79,7 @@ namespace ProjectCLB
                 this.tbxNameI.Text = dt5.ToString();
             }
             cn.Close();
+            MessageBox.Show("Thay đổi thông tin thành công");
         }
     }
 }

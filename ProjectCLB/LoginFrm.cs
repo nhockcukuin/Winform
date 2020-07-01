@@ -26,7 +26,7 @@ namespace ProjectCLB
 
         private void lgClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void lgIntro_Click(object sender, EventArgs e)
