@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="QuanLyCLBDataSet" targetNamespace="http://tempuri.org/QuanLyCLBDataSet.xsd" xmlns:mstns="http://tempuri.org/QuanLyCLBDataSet.xsd" xmlns="http://tempuri.org/QuanLyCLBDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QuanLyCLBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QuanLyCLBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProjectCLB.Properties.Settings.GlobalReference.Default.QuanLyCLBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="KQHDTableAdapter" GeneratorDataComponentClassName="KQHDTableAdapter" Name="KQHD" UserDataComponentName="KQHDTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QuanLyCLBConnectionString (Settings)" DbObjectName="QuanLyCLB.dbo.KQHD" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Mã CLB], [Tên CLB], [Tên hoạt động], [Họ tên], [Ngày tháng] FROM dbo.KQHD</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Mã CLB" DataSetColumn="Mã CLB" />
+              <Mapping SourceColumn="Tên CLB" DataSetColumn="Tên CLB" />
+              <Mapping SourceColumn="Tên hoạt động" DataSetColumn="Tên hoạt động" />
+              <Mapping SourceColumn="Họ tên" DataSetColumn="Họ tên" />
+              <Mapping SourceColumn="Ngày tháng" DataSetColumn="Ngày tháng" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="QuanLyCLBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="QuanLyCLBDataSet" msprop:Generator_UserDSName="QuanLyCLBDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="KQHD" msprop:Generator_TableClassName="KQHDDataTable" msprop:Generator_TableVarName="tableKQHD" msprop:Generator_TablePropName="KQHD" msprop:Generator_RowDeletingName="KQHDRowDeleting" msprop:Generator_RowChangingName="KQHDRowChanging" msprop:Generator_RowEvHandlerName="KQHDRowChangeEventHandler" msprop:Generator_RowDeletedName="KQHDRowDeleted" msprop:Generator_UserTableName="KQHD" msprop:Generator_RowChangedName="KQHDRowChanged" msprop:Generator_RowEvArgName="KQHDRowChangeEvent" msprop:Generator_RowClassName="KQHDRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Mã_x0020_CLB" msprop:Generator_ColumnVarNameInTable="columnMã_CLB" msprop:Generator_ColumnPropNameInRow="Mã_CLB" msprop:Generator_ColumnPropNameInTable="Mã_CLBColumn" msprop:Generator_UserColumnName="Mã CLB">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tên_x0020_CLB" msprop:Generator_ColumnVarNameInTable="columnTên_CLB" msprop:Generator_ColumnPropNameInRow="Tên_CLB" msprop:Generator_ColumnPropNameInTable="Tên_CLBColumn" msprop:Generator_UserColumnName="Tên CLB" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tên_x0020_hoạt_x0020_động" msprop:Generator_ColumnVarNameInTable="columnTên_hoạt_động" msprop:Generator_ColumnPropNameInRow="Tên_hoạt_động" msprop:Generator_ColumnPropNameInTable="Tên_hoạt_độngColumn" msprop:Generator_UserColumnName="Tên hoạt động" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Họ_x0020_tên" msprop:Generator_ColumnVarNameInTable="columnHọ_tên" msprop:Generator_ColumnPropNameInRow="Họ_tên" msprop:Generator_ColumnPropNameInTable="Họ_tênColumn" msprop:Generator_UserColumnName="Họ tên" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ngày_x0020_tháng" msprop:Generator_ColumnVarNameInTable="columnNgày_tháng" msprop:Generator_ColumnPropNameInRow="Ngày_tháng" msprop:Generator_ColumnPropNameInTable="Ngày_thángColumn" msprop:Generator_UserColumnName="Ngày tháng" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:KQHD" />
+      <xs:field xpath="mstns:Mã_x0020_CLB" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

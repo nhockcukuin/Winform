@@ -136,7 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LimeGreen;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(102)))), ((int)(((byte)(186)))));
             this.ClientSize = new System.Drawing.Size(354, 450);
             this.Controls.Add(this.lgClose);
             this.Controls.Add(this.lgPic);
@@ -150,6 +150,7 @@
             this.Name = "LoginFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.LoginFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lgPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

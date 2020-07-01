@@ -54,5 +54,11 @@ namespace ProjectCLB
             }
             cn.Close();
         }
+    
+
+        private void LoginFrm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
