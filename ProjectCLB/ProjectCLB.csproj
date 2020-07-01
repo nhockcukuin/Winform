@@ -118,6 +118,12 @@
     <Compile Include="UpdateCLB.Designer.cs">
       <DependentUpon>UpdateCLB.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateSV.Designer.cs">
+      <DependentUpon>UpdateSV.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlActivity.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </Compile>
     <EmbeddedResource Include="UpdateCLB.resx">
       <DependentUpon>UpdateCLB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateSV.resx">
+      <DependentUpon>UpdateSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlActivity.resx">
       <DependentUpon>UserControlActivity.cs</DependentUpon>

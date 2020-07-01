@@ -74,3 +74,4 @@ D:\Project\ProjectCLB\ProjectCLB\bin\Debug\Microsoft.Windows.Design.Interaction.
 D:\Project\ProjectCLB\ProjectCLB\bin\Debug\Microsoft.Windows.Design.Extensibility.dll
 D:\Project\ProjectCLB\ProjectCLB\bin\Debug\Microsoft.Windows.Design.Interaction.xml
 D:\Project\ProjectCLB\ProjectCLB\bin\Debug\Microsoft.Windows.Design.Extensibility.xml
+D:\Project\ProjectCLB\ProjectCLB\obj\Debug\ProjectCLB.UpdateSV.resources

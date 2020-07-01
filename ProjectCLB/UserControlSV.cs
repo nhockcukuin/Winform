@@ -49,5 +49,11 @@ namespace ProjectCLB
         {
 
         }
+
+        private void btnUpdateSV_Click(object sender, EventArgs e)
+        {
+            UpdateSV uSV = new UpdateSV();
+            uSV.Show();
+        }
     }
 }

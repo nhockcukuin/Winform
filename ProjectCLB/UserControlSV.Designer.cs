@@ -28,15 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.tbxFindClb = new System.Windows.Forms.TextBox();
+            this.dgrSV = new System.Windows.Forms.DataGridView();
+            this.btnUpdateSV = new System.Windows.Forms.Button();
             this.btnRefreshSV = new System.Windows.Forms.Button();
             this.btnFindSV = new System.Windows.Forms.Button();
-            this.tbxFindClb = new System.Windows.Forms.TextBox();
-            this.btnDeleteSV = new System.Windows.Forms.Button();
-            this.btnUpdateSV = new System.Windows.Forms.Button();
-            this.btnAddSV = new System.Windows.Forms.Button();
-            this.dgrSV = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgrSV)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tbxFindClb
+            // 
+            this.tbxFindClb.Location = new System.Drawing.Point(410, 43);
+            this.tbxFindClb.Multiline = true;
+            this.tbxFindClb.Name = "tbxFindClb";
+            this.tbxFindClb.Size = new System.Drawing.Size(320, 36);
+            this.tbxFindClb.TabIndex = 11;
+            // 
+            // dgrSV
+            // 
+            this.dgrSV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrSV.Location = new System.Drawing.Point(0, 189);
+            this.dgrSV.Name = "dgrSV";
+            this.dgrSV.Size = new System.Drawing.Size(727, 319);
+            this.dgrSV.TabIndex = 7;
+            // 
+            // btnUpdateSV
+            // 
+            this.btnUpdateSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdateSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(102)))), ((int)(((byte)(186)))));
+            this.btnUpdateSV.FlatAppearance.BorderSize = 0;
+            this.btnUpdateSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateSV.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateSV.Image = global::ProjectCLB.Properties.Resources.update__1_;
+            this.btnUpdateSV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdateSV.Location = new System.Drawing.Point(3, 149);
+            this.btnUpdateSV.Name = "btnUpdateSV";
+            this.btnUpdateSV.Size = new System.Drawing.Size(114, 34);
+            this.btnUpdateSV.TabIndex = 14;
+            this.btnUpdateSV.Text = "Cập nhật";
+            this.btnUpdateSV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdateSV.UseVisualStyleBackColor = false;
+            this.btnUpdateSV.Click += new System.EventHandler(this.btnUpdateSV_Click);
             // 
             // btnRefreshSV
             // 
@@ -73,84 +106,14 @@
             this.btnFindSV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFindSV.UseVisualStyleBackColor = false;
             // 
-            // tbxFindClb
-            // 
-            this.tbxFindClb.Location = new System.Drawing.Point(410, 43);
-            this.tbxFindClb.Multiline = true;
-            this.tbxFindClb.Name = "tbxFindClb";
-            this.tbxFindClb.Size = new System.Drawing.Size(320, 36);
-            this.tbxFindClb.TabIndex = 11;
-            // 
-            // btnDeleteSV
-            // 
-            this.btnDeleteSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(102)))), ((int)(((byte)(186)))));
-            this.btnDeleteSV.FlatAppearance.BorderSize = 0;
-            this.btnDeleteSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteSV.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteSV.Image = global::ProjectCLB.Properties.Resources.criss_cross;
-            this.btnDeleteSV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteSV.Location = new System.Drawing.Point(244, 149);
-            this.btnDeleteSV.Name = "btnDeleteSV";
-            this.btnDeleteSV.Size = new System.Drawing.Size(104, 34);
-            this.btnDeleteSV.TabIndex = 10;
-            this.btnDeleteSV.Text = "Xóa";
-            this.btnDeleteSV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDeleteSV.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdateSV
-            // 
-            this.btnUpdateSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(102)))), ((int)(((byte)(186)))));
-            this.btnUpdateSV.FlatAppearance.BorderSize = 0;
-            this.btnUpdateSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateSV.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateSV.Image = global::ProjectCLB.Properties.Resources.pencil;
-            this.btnUpdateSV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateSV.Location = new System.Drawing.Point(120, 149);
-            this.btnUpdateSV.Name = "btnUpdateSV";
-            this.btnUpdateSV.Size = new System.Drawing.Size(117, 34);
-            this.btnUpdateSV.TabIndex = 9;
-            this.btnUpdateSV.Text = "Chỉnh sửa";
-            this.btnUpdateSV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdateSV.UseVisualStyleBackColor = false;
-            // 
-            // btnAddSV
-            // 
-            this.btnAddSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(102)))), ((int)(((byte)(186)))));
-            this.btnAddSV.FlatAppearance.BorderSize = 0;
-            this.btnAddSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddSV.ForeColor = System.Drawing.Color.White;
-            this.btnAddSV.Image = global::ProjectCLB.Properties.Resources.add;
-            this.btnAddSV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddSV.Location = new System.Drawing.Point(0, 149);
-            this.btnAddSV.Name = "btnAddSV";
-            this.btnAddSV.Size = new System.Drawing.Size(114, 34);
-            this.btnAddSV.TabIndex = 8;
-            this.btnAddSV.Text = "Thêm mới";
-            this.btnAddSV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddSV.UseVisualStyleBackColor = false;
-            // 
-            // dgrSV
-            // 
-            this.dgrSV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrSV.Location = new System.Drawing.Point(0, 189);
-            this.dgrSV.Name = "dgrSV";
-            this.dgrSV.Size = new System.Drawing.Size(727, 319);
-            this.dgrSV.TabIndex = 7;
-            // 
             // UserControlSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnUpdateSV);
             this.Controls.Add(this.btnRefreshSV);
             this.Controls.Add(this.btnFindSV);
             this.Controls.Add(this.tbxFindClb);
-            this.Controls.Add(this.btnDeleteSV);
-            this.Controls.Add(this.btnUpdateSV);
-            this.Controls.Add(this.btnAddSV);
             this.Controls.Add(this.dgrSV);
             this.Name = "UserControlSV";
             this.Size = new System.Drawing.Size(733, 508);
@@ -166,9 +129,7 @@
         private System.Windows.Forms.Button btnRefreshSV;
         private System.Windows.Forms.Button btnFindSV;
         private System.Windows.Forms.TextBox tbxFindClb;
-        private System.Windows.Forms.Button btnDeleteSV;
-        private System.Windows.Forms.Button btnUpdateSV;
-        private System.Windows.Forms.Button btnAddSV;
         private System.Windows.Forms.DataGridView dgrSV;
+        private System.Windows.Forms.Button btnUpdateSV;
     }
 }
