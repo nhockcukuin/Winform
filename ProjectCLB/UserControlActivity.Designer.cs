@@ -31,10 +31,8 @@
             this.btnRefreshActivity = new System.Windows.Forms.Button();
             this.btnFindActivity = new System.Windows.Forms.Button();
             this.tbxFindActivity = new System.Windows.Forms.TextBox();
-            this.btnDeleteActivity = new System.Windows.Forms.Button();
-            this.btnUpdateActivity = new System.Windows.Forms.Button();
-            this.btnAddActivity = new System.Windows.Forms.Button();
             this.dgrActivity = new System.Windows.Forms.DataGridView();
+            this.btnUpdateActivity = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgrActivity)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,58 +79,6 @@
             this.tbxFindActivity.Size = new System.Drawing.Size(320, 36);
             this.tbxFindActivity.TabIndex = 11;
             // 
-            // btnDeleteActivity
-            // 
-            this.btnDeleteActivity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(102)))), ((int)(((byte)(186)))));
-            this.btnDeleteActivity.FlatAppearance.BorderSize = 0;
-            this.btnDeleteActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteActivity.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteActivity.Image = global::ProjectCLB.Properties.Resources.criss_cross;
-            this.btnDeleteActivity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteActivity.Location = new System.Drawing.Point(247, 146);
-            this.btnDeleteActivity.Name = "btnDeleteActivity";
-            this.btnDeleteActivity.Size = new System.Drawing.Size(104, 34);
-            this.btnDeleteActivity.TabIndex = 10;
-            this.btnDeleteActivity.Text = "Xóa";
-            this.btnDeleteActivity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDeleteActivity.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdateActivity
-            // 
-            this.btnUpdateActivity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(102)))), ((int)(((byte)(186)))));
-            this.btnUpdateActivity.FlatAppearance.BorderSize = 0;
-            this.btnUpdateActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateActivity.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateActivity.Image = global::ProjectCLB.Properties.Resources.pencil;
-            this.btnUpdateActivity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateActivity.Location = new System.Drawing.Point(123, 146);
-            this.btnUpdateActivity.Name = "btnUpdateActivity";
-            this.btnUpdateActivity.Size = new System.Drawing.Size(117, 34);
-            this.btnUpdateActivity.TabIndex = 9;
-            this.btnUpdateActivity.Text = "Chỉnh sửa";
-            this.btnUpdateActivity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdateActivity.UseVisualStyleBackColor = false;
-            // 
-            // btnAddActivity
-            // 
-            this.btnAddActivity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddActivity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(102)))), ((int)(((byte)(186)))));
-            this.btnAddActivity.FlatAppearance.BorderSize = 0;
-            this.btnAddActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddActivity.ForeColor = System.Drawing.Color.White;
-            this.btnAddActivity.Image = global::ProjectCLB.Properties.Resources.add;
-            this.btnAddActivity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddActivity.Location = new System.Drawing.Point(3, 146);
-            this.btnAddActivity.Name = "btnAddActivity";
-            this.btnAddActivity.Size = new System.Drawing.Size(114, 34);
-            this.btnAddActivity.TabIndex = 8;
-            this.btnAddActivity.Text = "Thêm mới";
-            this.btnAddActivity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddActivity.UseVisualStyleBackColor = false;
-            // 
             // dgrActivity
             // 
             this.dgrActivity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -141,16 +87,33 @@
             this.dgrActivity.Size = new System.Drawing.Size(727, 319);
             this.dgrActivity.TabIndex = 7;
             // 
+            // btnUpdateActivity
+            // 
+            this.btnUpdateActivity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdateActivity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(102)))), ((int)(((byte)(186)))));
+            this.btnUpdateActivity.FlatAppearance.BorderSize = 0;
+            this.btnUpdateActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateActivity.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateActivity.Image = global::ProjectCLB.Properties.Resources.update__1_;
+            this.btnUpdateActivity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdateActivity.Location = new System.Drawing.Point(3, 146);
+            this.btnUpdateActivity.Name = "btnUpdateActivity";
+            this.btnUpdateActivity.Size = new System.Drawing.Size(114, 34);
+            this.btnUpdateActivity.TabIndex = 14;
+            this.btnUpdateActivity.Text = "Cập nhật";
+            this.btnUpdateActivity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdateActivity.UseVisualStyleBackColor = false;
+            this.btnUpdateActivity.Click += new System.EventHandler(this.btnUpdateActivity_Click);
+            // 
             // UserControlActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnUpdateActivity);
             this.Controls.Add(this.btnRefreshActivity);
             this.Controls.Add(this.btnFindActivity);
             this.Controls.Add(this.tbxFindActivity);
-            this.Controls.Add(this.btnDeleteActivity);
-            this.Controls.Add(this.btnUpdateActivity);
-            this.Controls.Add(this.btnAddActivity);
             this.Controls.Add(this.dgrActivity);
             this.Name = "UserControlActivity";
             this.Size = new System.Drawing.Size(733, 508);
@@ -165,9 +128,7 @@
         private System.Windows.Forms.Button btnRefreshActivity;
         private System.Windows.Forms.Button btnFindActivity;
         private System.Windows.Forms.TextBox tbxFindActivity;
-        private System.Windows.Forms.Button btnDeleteActivity;
-        private System.Windows.Forms.Button btnUpdateActivity;
-        private System.Windows.Forms.Button btnAddActivity;
         private System.Windows.Forms.DataGridView dgrActivity;
+        private System.Windows.Forms.Button btnUpdateActivity;
     }
 }

@@ -39,5 +39,11 @@ namespace ProjectCLB
 
             return dataCLB;
         }
+
+        private void btnUpdateActivity_Click(object sender, EventArgs e)
+        {
+            UpdateActivity uActivity = new UpdateActivity();
+            uActivity.Show();
+        }
     }
 }
