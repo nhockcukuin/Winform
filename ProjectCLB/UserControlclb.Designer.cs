@@ -47,6 +47,7 @@
             // 
             // tbxFindClb
             // 
+            this.tbxFindClb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxFindClb.Location = new System.Drawing.Point(410, 46);
             this.tbxFindClb.Multiline = true;
             this.tbxFindClb.Name = "tbxFindClb";
@@ -87,6 +88,7 @@
             this.btnFindClb.Text = "Tìm kiếm";
             this.btnFindClb.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFindClb.UseVisualStyleBackColor = false;
+            this.btnFindClb.Click += new System.EventHandler(this.btnFindClb_Click);
             // 
             // btnAddClb
             // 

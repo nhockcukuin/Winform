@@ -70,9 +70,11 @@
             this.btnFindActivity.Text = "Tìm kiếm";
             this.btnFindActivity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFindActivity.UseVisualStyleBackColor = false;
+            this.btnFindActivity.Click += new System.EventHandler(this.btnFindActivity_Click);
             // 
             // tbxFindActivity
             // 
+            this.tbxFindActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxFindActivity.Location = new System.Drawing.Point(410, 46);
             this.tbxFindActivity.Multiline = true;
             this.tbxFindActivity.Name = "tbxFindActivity";

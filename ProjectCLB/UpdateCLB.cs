@@ -70,8 +70,6 @@ namespace ProjectCLB
             this.UcbxTypeOption.Items.Add("Sửa");
             this.UcbxTypeOption.SelectedIndex = UcbxTypeOption.FindString("Thêm mới");
 
-            this.UtbxName.Hide();
-
         }
         void AddCLB()
         {

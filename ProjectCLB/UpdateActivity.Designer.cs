@@ -42,8 +42,8 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.Alb5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.AdateSince = new System.Windows.Forms.DateTimePicker();
             this.AdateFrom = new System.Windows.Forms.DateTimePicker();
+            this.AdateTo = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // AtbxName
@@ -192,27 +192,27 @@
             this.label2.TabIndex = 34;
             this.label2.Text = "Đến ngày";
             // 
-            // AdateSince
-            // 
-            this.AdateSince.Location = new System.Drawing.Point(143, 240);
-            this.AdateSince.Name = "AdateSince";
-            this.AdateSince.Size = new System.Drawing.Size(227, 20);
-            this.AdateSince.TabIndex = 35;
-            // 
             // AdateFrom
             // 
-            this.AdateFrom.Location = new System.Drawing.Point(143, 284);
+            this.AdateFrom.Location = new System.Drawing.Point(143, 240);
             this.AdateFrom.Name = "AdateFrom";
             this.AdateFrom.Size = new System.Drawing.Size(227, 20);
-            this.AdateFrom.TabIndex = 36;
+            this.AdateFrom.TabIndex = 35;
+            // 
+            // AdateTo
+            // 
+            this.AdateTo.Location = new System.Drawing.Point(143, 284);
+            this.AdateTo.Name = "AdateTo";
+            this.AdateTo.Size = new System.Drawing.Size(227, 20);
+            this.AdateTo.TabIndex = 36;
             // 
             // UpdateActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(386, 400);
+            this.Controls.Add(this.AdateTo);
             this.Controls.Add(this.AdateFrom);
-            this.Controls.Add(this.AdateSince);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Alb5);
             this.Controls.Add(this.btnMinize);
@@ -253,7 +253,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label Alb5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker AdateSince;
         private System.Windows.Forms.DateTimePicker AdateFrom;
+        private System.Windows.Forms.DateTimePicker AdateTo;
     }
 }

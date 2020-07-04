@@ -98,5 +98,12 @@ namespace ProjectCLB
             pnColor.Top = btnUserm.Top;
             userControlInformation1.BringToFront();
         }
+
+        private void btnStatisticalm_Click(object sender, EventArgs e)
+        {
+            pnColor.Height = btnStatisticalm.Height;
+            pnColor.Top = btnStatisticalm.Top;
+            userStatistical1.BringToFront();
+        }
     }
 }

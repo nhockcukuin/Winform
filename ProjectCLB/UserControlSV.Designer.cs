@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbxFindClb = new System.Windows.Forms.TextBox();
+            this.tbxFindSV = new System.Windows.Forms.TextBox();
             this.dgrSV = new System.Windows.Forms.DataGridView();
             this.btnUpdateSV = new System.Windows.Forms.Button();
             this.btnRefreshSV = new System.Windows.Forms.Button();
@@ -36,13 +36,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgrSV)).BeginInit();
             this.SuspendLayout();
             // 
-            // tbxFindClb
+            // tbxFindSV
             // 
-            this.tbxFindClb.Location = new System.Drawing.Point(410, 43);
-            this.tbxFindClb.Multiline = true;
-            this.tbxFindClb.Name = "tbxFindClb";
-            this.tbxFindClb.Size = new System.Drawing.Size(320, 36);
-            this.tbxFindClb.TabIndex = 11;
+            this.tbxFindSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxFindSV.Location = new System.Drawing.Point(410, 43);
+            this.tbxFindSV.Multiline = true;
+            this.tbxFindSV.Name = "tbxFindSV";
+            this.tbxFindSV.Size = new System.Drawing.Size(320, 36);
+            this.tbxFindSV.TabIndex = 11;
             // 
             // dgrSV
             // 
@@ -105,6 +106,7 @@
             this.btnFindSV.Text = "Tìm kiếm";
             this.btnFindSV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFindSV.UseVisualStyleBackColor = false;
+            this.btnFindSV.Click += new System.EventHandler(this.btnFindSV_Click);
             // 
             // UserControlSV
             // 
@@ -113,7 +115,7 @@
             this.Controls.Add(this.btnUpdateSV);
             this.Controls.Add(this.btnRefreshSV);
             this.Controls.Add(this.btnFindSV);
-            this.Controls.Add(this.tbxFindClb);
+            this.Controls.Add(this.tbxFindSV);
             this.Controls.Add(this.dgrSV);
             this.Name = "UserControlSV";
             this.Size = new System.Drawing.Size(733, 508);
@@ -128,7 +130,7 @@
 
         private System.Windows.Forms.Button btnRefreshSV;
         private System.Windows.Forms.Button btnFindSV;
-        private System.Windows.Forms.TextBox tbxFindClb;
+        private System.Windows.Forms.TextBox tbxFindSV;
         private System.Windows.Forms.DataGridView dgrSV;
         private System.Windows.Forms.Button btnUpdateSV;
     }

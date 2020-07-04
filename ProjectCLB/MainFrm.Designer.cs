@@ -46,6 +46,7 @@
             this.userControlCLB1 = new ProjectCLB.UserControlCLB();
             this.userControlActivity1 = new ProjectCLB.UserControlActivity();
             this.userControlInformation1 = new ProjectCLB.UserControlInformation();
+            this.userStatistical1 = new ProjectCLB.UserStatistical();
             this.mainPN1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,6 +161,7 @@
             this.btnStatisticalm.TabIndex = 0;
             this.btnStatisticalm.Text = "Thống kê";
             this.btnStatisticalm.UseVisualStyleBackColor = true;
+            this.btnStatisticalm.Click += new System.EventHandler(this.btnStatisticalm_Click);
             // 
             // btnActivitym
             // 
@@ -261,12 +263,20 @@
             this.userControlInformation1.Size = new System.Drawing.Size(733, 508);
             this.userControlInformation1.TabIndex = 7;
             // 
+            // userStatistical1
+            // 
+            this.userStatistical1.Location = new System.Drawing.Point(180, 27);
+            this.userStatistical1.Name = "userStatistical1";
+            this.userStatistical1.Size = new System.Drawing.Size(733, 501);
+            this.userStatistical1.TabIndex = 8;
+            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(913, 531);
+            this.Controls.Add(this.userStatistical1);
             this.Controls.Add(this.userControlInformation1);
             this.Controls.Add(this.userControlActivity1);
             this.Controls.Add(this.userControlSV1);
@@ -306,5 +316,6 @@
         private UserControlSV userControlSV1;
         private UserControlActivity userControlActivity1;
         private UserControlInformation userControlInformation1;
+        private UserStatistical userStatistical1;
     }
 }

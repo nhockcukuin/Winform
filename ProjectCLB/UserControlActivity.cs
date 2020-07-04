@@ -13,6 +13,7 @@ namespace ProjectCLB
 {
     public partial class UserControlActivity : UserControl
     {
+        //show date in data grid
         public UserControlActivity()
         {
             InitializeComponent();
@@ -39,11 +40,32 @@ namespace ProjectCLB
 
             return dataCLB;
         }
-
+        // show tab update
         private void btnUpdateActivity_Click(object sender, EventArgs e)
         {
             UpdateActivity uActivity = new UpdateActivity();
             uActivity.Show();
+        }
+        //Find and show data
+        private void btnFindActivity_Click(object sender, EventArgs e)
+        {
+            this.dgrActivity.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgrActivity.DataSource = FindData().Tables[0];
+        }
+        DataSet FindData()
+        {
+            DataSet dataCLB = new DataSet();
+            string valueActivity = this.tbxFindActivity.Text;
+            string query = string.Format("select MAHD as [Mã hoạt động], TENCLB as [Tên CLB], TENHOATDONG as [Tên hoạt động], TUNGAY as [Từ ngày] , DENNGAY as [Đến ngày]from HOATDONG join CLB on HOATDONG.MACLB = CLB.MACLB where MAHD like '%{0}%' or TENCLB like '%{0}%' or TENHOATDONG like N'%{0}%' ", valueActivity);
+            using (SqlConnection cn = new SqlConnection(ConnectString.cnString))
+            {
+                cn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(query, cn);
+                adapter.Fill(dataCLB);
+                cn.Close();
+            }
+
+            return dataCLB;
         }
     }
 }

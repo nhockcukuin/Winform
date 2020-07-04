@@ -78,8 +78,8 @@ namespace ProjectCLB
             // perform mission
             else
             {
-                string theDateSince = AdateSince.Value.ToShortDateString();
                 string theDateFrom = AdateFrom.Value.ToShortDateString();
+                string theDateTo = AdateTo.Value.ToShortDateString();
                 //Check if the primary key is the same                
                 cn.Open();
                 string sql = string.Format("select * from CLB where MaCLB='{0}'", this.AtbxID.Text);
@@ -98,7 +98,7 @@ namespace ProjectCLB
                 {
                     //Do more data
                     string sql1;
-                    sql1 = string.Format("insert into HOATDONG values ('{0}','{1}','{2}','{3}','{4}')", this.AtbxID.Text, this.AtbxIDCLB.Text, this.AtbxName.Text,theDateSince,theDateFrom);
+                    sql1 = string.Format("insert into HOATDONG values ('{0}','{1}','{2}','{3}','{4}')", this.AtbxID.Text, this.AtbxIDCLB.Text, this.AtbxName.Text,theDateFrom,theDateTo);
                     Perform(sql1);
                 }
             }
@@ -114,10 +114,10 @@ namespace ProjectCLB
             }
             else
             {
-                string theDateSince = AdateSince.Value.ToShortDateString();
                 string theDateFrom = AdateFrom.Value.ToShortDateString();
+                string theDateTo = AdateTo.Value.ToShortDateString();
                 //New data
-                string sql1 = string.Format("update HOATDONG set MACLB='{0}',TENHOATDONG=N'{1}', TUNGAY='{2}', DENNGAY='{3}' where MAHD='{4}'", this.AtbxIDCLB.Text, this.AtbxName.Text, theDateSince,theDateFrom,this.AtbxID.Text);
+                string sql1 = string.Format("update HOATDONG set MACLB='{0}',TENHOATDONG=N'{1}', TUNGAY='{2}', DENNGAY='{3}' where MAHD='{4}'", this.AtbxIDCLB.Text, this.AtbxName.Text, theDateFrom,theDateTo,this.AtbxID.Text);
                 Perform(sql1);
             }
         }
