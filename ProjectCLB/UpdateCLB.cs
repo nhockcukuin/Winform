@@ -152,7 +152,7 @@ namespace ProjectCLB
                 DialogResult = MessageBox.Show("Bạn muốn xóa dữ liệu câu lạc bộ ", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (DialogResult == DialogResult.Yes)
                 {
-                    //Thực hiện xóa dữ liệu
+                    //Delete data
                     string sql = string.Format("Delete from CLB where MaCLB='{0}'", this.UtbxID.Text);
                     Perform(sql);
                 }

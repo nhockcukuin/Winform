@@ -47,6 +47,7 @@
             this.btnOptionJoin.TabIndex = 14;
             this.btnOptionJoin.Text = "Tham gia";
             this.btnOptionJoin.UseVisualStyleBackColor = false;
+            this.btnOptionJoin.Click += new System.EventHandler(this.btnOptionJoin_Click);
             // 
             // btnOptionActivity
             // 

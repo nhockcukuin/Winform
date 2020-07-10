@@ -28,5 +28,12 @@ namespace ProjectCLB
             updateActivity.Show();
             this.Close();
         }
+
+        private void btnOptionJoin_Click(object sender, EventArgs e)
+        {
+            UpdateJoinActivity updateJoinActivity = new UpdateJoinActivity();
+            updateJoinActivity.Show();
+            this.Close();
+        }
     }
 }

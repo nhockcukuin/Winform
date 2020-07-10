@@ -147,3 +147,4 @@ D:\Project\Winform\ProjectCLB\obj\Debug\ProjectCLB.pdb
 D:\Project\Winform\ProjectCLB\obj\Debug\ProjectCLB.OptionCLB.resources
 D:\Project\Winform\ProjectCLB\obj\Debug\ProjectCLB.MemberofCLB.resources
 D:\Project\Winform\ProjectCLB\obj\Debug\ProjectCLB.OptionActivity.resources
+D:\Project\Winform\ProjectCLB\obj\Debug\ProjectCLB.UpdateJoinActivity.resources
