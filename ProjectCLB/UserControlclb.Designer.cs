@@ -30,9 +30,10 @@
         {
             this.dgrCLB = new System.Windows.Forms.DataGridView();
             this.tbxFindClb = new System.Windows.Forms.TextBox();
-            this.btnRefreshClb = new System.Windows.Forms.Button();
+            this.btnListJoinCLB = new System.Windows.Forms.Button();
+            this.btnListCLB = new System.Windows.Forms.Button();
             this.btnFindClb = new System.Windows.Forms.Button();
-            this.btnAddClb = new System.Windows.Forms.Button();
+            this.btnUpdateCLB = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgrCLB)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,23 +55,41 @@
             this.tbxFindClb.Size = new System.Drawing.Size(320, 36);
             this.tbxFindClb.TabIndex = 4;
             // 
-            // btnRefreshClb
+            // btnListJoinCLB
             // 
-            this.btnRefreshClb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(102)))), ((int)(((byte)(186)))));
-            this.btnRefreshClb.FlatAppearance.BorderSize = 0;
-            this.btnRefreshClb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefreshClb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefreshClb.ForeColor = System.Drawing.Color.White;
-            this.btnRefreshClb.Image = global::ProjectCLB.Properties.Resources.update;
-            this.btnRefreshClb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefreshClb.Location = new System.Drawing.Point(604, 146);
-            this.btnRefreshClb.Name = "btnRefreshClb";
-            this.btnRefreshClb.Size = new System.Drawing.Size(126, 34);
-            this.btnRefreshClb.TabIndex = 6;
-            this.btnRefreshClb.Text = "Tải dữ liệu";
-            this.btnRefreshClb.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRefreshClb.UseVisualStyleBackColor = false;
-            this.btnRefreshClb.Click += new System.EventHandler(this.btnRefreshClb_Click);
+            this.btnListJoinCLB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(102)))), ((int)(((byte)(186)))));
+            this.btnListJoinCLB.FlatAppearance.BorderSize = 0;
+            this.btnListJoinCLB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListJoinCLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListJoinCLB.ForeColor = System.Drawing.Color.White;
+            this.btnListJoinCLB.Image = global::ProjectCLB.Properties.Resources.list;
+            this.btnListJoinCLB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListJoinCLB.Location = new System.Drawing.Point(604, 146);
+            this.btnListJoinCLB.Name = "btnListJoinCLB";
+            this.btnListJoinCLB.Size = new System.Drawing.Size(126, 34);
+            this.btnListJoinCLB.TabIndex = 7;
+            this.btnListJoinCLB.Text = "Thành viên";
+            this.btnListJoinCLB.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnListJoinCLB.UseVisualStyleBackColor = false;
+            this.btnListJoinCLB.Click += new System.EventHandler(this.btnListJoinCLB_Click);
+            // 
+            // btnListCLB
+            // 
+            this.btnListCLB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(102)))), ((int)(((byte)(186)))));
+            this.btnListCLB.FlatAppearance.BorderSize = 0;
+            this.btnListCLB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListCLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListCLB.ForeColor = System.Drawing.Color.White;
+            this.btnListCLB.Image = global::ProjectCLB.Properties.Resources.list__1_;
+            this.btnListCLB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListCLB.Location = new System.Drawing.Point(472, 146);
+            this.btnListCLB.Name = "btnListCLB";
+            this.btnListCLB.Size = new System.Drawing.Size(126, 34);
+            this.btnListCLB.TabIndex = 6;
+            this.btnListCLB.Text = "Câu lạc bộ";
+            this.btnListCLB.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnListCLB.UseVisualStyleBackColor = false;
+            this.btnListCLB.Click += new System.EventHandler(this.btnRefreshClb_Click);
             // 
             // btnFindClb
             // 
@@ -90,34 +109,35 @@
             this.btnFindClb.UseVisualStyleBackColor = false;
             this.btnFindClb.Click += new System.EventHandler(this.btnFindClb_Click);
             // 
-            // btnAddClb
+            // btnUpdateCLB
             // 
-            this.btnAddClb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddClb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(102)))), ((int)(((byte)(186)))));
-            this.btnAddClb.FlatAppearance.BorderSize = 0;
-            this.btnAddClb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddClb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddClb.ForeColor = System.Drawing.Color.White;
-            this.btnAddClb.Image = global::ProjectCLB.Properties.Resources.update__1_;
-            this.btnAddClb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddClb.Location = new System.Drawing.Point(3, 146);
-            this.btnAddClb.Name = "btnAddClb";
-            this.btnAddClb.Size = new System.Drawing.Size(114, 34);
-            this.btnAddClb.TabIndex = 1;
-            this.btnAddClb.Text = "Cập nhật";
-            this.btnAddClb.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddClb.UseVisualStyleBackColor = false;
-            this.btnAddClb.Click += new System.EventHandler(this.btnAddClb_Click);
+            this.btnUpdateCLB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdateCLB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(102)))), ((int)(((byte)(186)))));
+            this.btnUpdateCLB.FlatAppearance.BorderSize = 0;
+            this.btnUpdateCLB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateCLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateCLB.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateCLB.Image = global::ProjectCLB.Properties.Resources.update__1_;
+            this.btnUpdateCLB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdateCLB.Location = new System.Drawing.Point(3, 146);
+            this.btnUpdateCLB.Name = "btnUpdateCLB";
+            this.btnUpdateCLB.Size = new System.Drawing.Size(114, 34);
+            this.btnUpdateCLB.TabIndex = 1;
+            this.btnUpdateCLB.Text = "Cập nhật";
+            this.btnUpdateCLB.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdateCLB.UseVisualStyleBackColor = false;
+            this.btnUpdateCLB.Click += new System.EventHandler(this.btnAddClb_Click);
             // 
             // UserControlCLB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.btnRefreshClb);
+            this.Controls.Add(this.btnListJoinCLB);
+            this.Controls.Add(this.btnListCLB);
             this.Controls.Add(this.btnFindClb);
             this.Controls.Add(this.tbxFindClb);
-            this.Controls.Add(this.btnAddClb);
+            this.Controls.Add(this.btnUpdateCLB);
             this.Controls.Add(this.dgrCLB);
             this.Name = "UserControlCLB";
             this.Size = new System.Drawing.Size(733, 508);
@@ -132,7 +152,8 @@
         private System.Windows.Forms.DataGridView dgrCLB;
         private System.Windows.Forms.TextBox tbxFindClb;
         private System.Windows.Forms.Button btnFindClb;
-        private System.Windows.Forms.Button btnRefreshClb;
-        private System.Windows.Forms.Button btnAddClb;
+        private System.Windows.Forms.Button btnListCLB;
+        private System.Windows.Forms.Button btnUpdateCLB;
+        private System.Windows.Forms.Button btnListJoinCLB;
     }
 }

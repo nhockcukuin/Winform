@@ -42,11 +42,11 @@
             this.btnCLBm = new System.Windows.Forms.Button();
             this.btnRestore = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.userStatistical1 = new ProjectCLB.UserStatistical();
+            this.userControlInformation1 = new ProjectCLB.UserControlInformation();
+            this.userControlActivity1 = new ProjectCLB.UserControlActivity();
             this.userControlSV1 = new ProjectCLB.UserControlSV();
             this.userControlCLB1 = new ProjectCLB.UserControlCLB();
-            this.userControlActivity1 = new ProjectCLB.UserControlActivity();
-            this.userControlInformation1 = new ProjectCLB.UserControlInformation();
-            this.userStatistical1 = new ProjectCLB.UserStatistical();
             this.mainPN1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,9 +105,9 @@
             this.btnAboutUS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAboutUS.Image = global::ProjectCLB.Properties.Resources.question;
             this.btnAboutUS.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnAboutUS.Location = new System.Drawing.Point(0, 496);
+            this.btnAboutUS.Location = new System.Drawing.Point(0, 493);
             this.btnAboutUS.Name = "btnAboutUS";
-            this.btnAboutUS.Size = new System.Drawing.Size(36, 35);
+            this.btnAboutUS.Size = new System.Drawing.Size(42, 38);
             this.btnAboutUS.TabIndex = 4;
             this.btnAboutUS.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnAboutUS.UseVisualStyleBackColor = true;
@@ -234,6 +234,27 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // userStatistical1
+            // 
+            this.userStatistical1.Location = new System.Drawing.Point(180, 27);
+            this.userStatistical1.Name = "userStatistical1";
+            this.userStatistical1.Size = new System.Drawing.Size(733, 501);
+            this.userStatistical1.TabIndex = 8;
+            // 
+            // userControlInformation1
+            // 
+            this.userControlInformation1.Location = new System.Drawing.Point(180, 23);
+            this.userControlInformation1.Name = "userControlInformation1";
+            this.userControlInformation1.Size = new System.Drawing.Size(733, 508);
+            this.userControlInformation1.TabIndex = 7;
+            // 
+            // userControlActivity1
+            // 
+            this.userControlActivity1.Location = new System.Drawing.Point(180, 23);
+            this.userControlActivity1.Name = "userControlActivity1";
+            this.userControlActivity1.Size = new System.Drawing.Size(733, 508);
+            this.userControlActivity1.TabIndex = 6;
+            // 
             // userControlSV1
             // 
             this.userControlSV1.Location = new System.Drawing.Point(180, 23);
@@ -248,27 +269,6 @@
             this.userControlCLB1.Name = "userControlCLB1";
             this.userControlCLB1.Size = new System.Drawing.Size(733, 508);
             this.userControlCLB1.TabIndex = 4;
-            // 
-            // userControlActivity1
-            // 
-            this.userControlActivity1.Location = new System.Drawing.Point(180, 23);
-            this.userControlActivity1.Name = "userControlActivity1";
-            this.userControlActivity1.Size = new System.Drawing.Size(733, 508);
-            this.userControlActivity1.TabIndex = 6;
-            // 
-            // userControlInformation1
-            // 
-            this.userControlInformation1.Location = new System.Drawing.Point(180, 23);
-            this.userControlInformation1.Name = "userControlInformation1";
-            this.userControlInformation1.Size = new System.Drawing.Size(733, 508);
-            this.userControlInformation1.TabIndex = 7;
-            // 
-            // userStatistical1
-            // 
-            this.userStatistical1.Location = new System.Drawing.Point(180, 27);
-            this.userStatistical1.Name = "userStatistical1";
-            this.userStatistical1.Size = new System.Drawing.Size(733, 501);
-            this.userStatistical1.TabIndex = 8;
             // 
             // MainFrm
             // 

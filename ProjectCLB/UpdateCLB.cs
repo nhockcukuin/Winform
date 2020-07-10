@@ -92,53 +92,74 @@ namespace ProjectCLB
             // perform mission
             else
             {
-                //Check if the primary key is the same                
-                cn.Open();
-                string sql = string.Format("select * from CLB where MaCLB='{0}'", this.UtbxID.Text);
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                SqlDataReader dr = cmd.ExecuteReader();
-                Boolean t = dr.HasRows;
-                cn.Close();
-                //Duplicate primary key
-                if (t == true)
+                try
                 {
-                    MessageBox.Show("Mã CLB bị trùng. Vui lòng nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    //Check if the primary key is the same                
+                    cn.Open();
+                    string sql = string.Format("select * from CLB where MaCLB='{0}'", this.UtbxID.Text);
+                    SqlCommand cmd = new SqlCommand(sql, cn);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    Boolean t = dr.HasRows;
+                    cn.Close();
+                    //Duplicate primary key
+                    if (t == true)
+                    {
+                        MessageBox.Show("Mã CLB bị trùng. Vui lòng nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    // Do not duplicate primary key
+                    else
+                    {
+                        //Do more data
+                        string sql1;
+                        sql1 = string.Format("insert into CLB values ('{0}',N'{1}',N'{2}')", this.UtbxID.Text, this.UtbxName.Text, this.UtbxQL.Text);
+                        Perform(sql1);
+                    }
                 }
-                // Do not duplicate primary key
-                else
+                catch(Exception)
                 {
-                    //Do more data
-                    string sql1;
-                    sql1 = string.Format("insert into CLB values ('{0}',N'{1}',N'{2}')", this.UtbxID.Text, this.UtbxName.Text, this.UtbxQL.Text);
-                    Perform(sql1);
+                    
                 }
             }
 
         }
         void EditCLB()
         {
-            //check the data
-            if (this.UtbxID.Text == "")
+            try
             {
-                MessageBox.Show("Bạn chưa nhập mã CLB", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.UtbxID.Focus();
+                //check the data
+                if (this.UtbxID.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập mã CLB", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.UtbxID.Focus();
+                }
+                else
+                {
+                    //New data
+                    string sql1 = string.Format("update CLB set TENCLB=N'{0}',DONVIQUANLY=N'{1}' where MACLB='{2}'", this.UtbxName.Text, this.UtbxQL.Text, this.UtbxID.Text);
+                    Perform(sql1);
+                }
             }
-            else
+            catch(Exception)
             {
-            //New data
-            string sql1 = string.Format("update CLB set TENCLB=N'{0}',DONVIQUANLY=N'{1}' where MACLB='{2}'", this.UtbxName.Text,this.UtbxQL.Text,this.UtbxID.Text);
-            Perform(sql1);
+                MessageBox.Show("Mã CLB không hợp lệ");
             }
         }
         void DeleteCLB()
         {
-            DialogResult = MessageBox.Show("Bạn muốn xóa dữ liệu câu lạc bộ ", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (DialogResult == DialogResult.Yes)
+            try
             {
-                //Thực hiện xóa dữ liệu
-                string sql = string.Format("Delete from CLB where MaCLB='{0}'", this.UtbxID.Text);
-                Perform(sql);
+                DialogResult = MessageBox.Show("Bạn muốn xóa dữ liệu câu lạc bộ ", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (DialogResult == DialogResult.Yes)
+                {
+                    //Thực hiện xóa dữ liệu
+                    string sql = string.Format("Delete from CLB where MaCLB='{0}'", this.UtbxID.Text);
+                    Perform(sql);
+                }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Mã CLB không hợp lệ");
             }
         }
         void Perform(string sql)

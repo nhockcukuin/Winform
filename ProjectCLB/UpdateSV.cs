@@ -142,7 +142,7 @@ namespace ProjectCLB
             DialogResult = MessageBox.Show("Bạn muốn xóa dữ liệu sinh viên ", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (DialogResult == DialogResult.Yes)
             {
-                //Thực hiện xóa dữ liệu
+                //Delete data
                 string sql = string.Format("Delete from SINHVIEN where MASV='{0}'", this.SVtbxID.Text);
                 Perform(sql);
             }
@@ -157,6 +157,10 @@ namespace ProjectCLB
             if (i == 0)
             {
                 MessageBox.Show("Việc cập nhật dữ liệu không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK);
             }
             cn.Close();
         }

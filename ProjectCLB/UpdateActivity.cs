@@ -142,6 +142,10 @@ namespace ProjectCLB
             {
                 MessageBox.Show("Việc cập nhật dữ liệu không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else
+            {
+                MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK);
+            }
             cn.Close();
         }
     }

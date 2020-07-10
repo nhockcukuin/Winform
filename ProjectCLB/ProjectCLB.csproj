@@ -104,6 +104,24 @@
     <Compile Include="MainFrm.Designer.cs">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemberofCLB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberofCLB.Designer.cs">
+      <DependentUpon>MemberofCLB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionActivity.Designer.cs">
+      <DependentUpon>OptionActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionCLB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionCLB.Designer.cs">
+      <DependentUpon>OptionCLB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyCLBDataSet.Designer.cs">
@@ -123,6 +141,12 @@
     </Compile>
     <Compile Include="UpdateCLB.Designer.cs">
       <DependentUpon>UpdateCLB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateJoinActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateJoinActivity.Designer.cs">
+      <DependentUpon>UpdateJoinActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateSV.cs">
       <SubType>Form</SubType>
@@ -169,6 +193,15 @@
     <EmbeddedResource Include="MainFrm.resx">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MemberofCLB.resx">
+      <DependentUpon>MemberofCLB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionActivity.resx">
+      <DependentUpon>OptionActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionCLB.resx">
+      <DependentUpon>OptionCLB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -184,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateCLB.resx">
       <DependentUpon>UpdateCLB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateJoinActivity.resx">
+      <DependentUpon>UpdateJoinActivity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateSV.resx">
       <DependentUpon>UpdateSV.cs</DependentUpon>
@@ -302,6 +338,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\update %281%29.png" />
+    <None Include="Resources\list.png" />
+    <None Include="Resources\list %281%29.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
