@@ -101,7 +101,7 @@ namespace ProjectCLB
             {
                 String theDateJoin = dateJoin.Value.ToShortDateString();
                 //New data
-                string sql1 = string.Format("update THAMGIAHD set MAHD='{0}',MASV='{1}',NGAYTHAMGIAHD='{2}'", this.tbxIDActivity.Text, this.tbxIDActivityJoin.Text, theDateJoin);
+                string sql1 = string.Format("update THAMGIAHD set MAHD='{0}',MASV='{1}',NGAYTHAMGIAHD='{2}' where MAHD='{3}' and MASV='{4}'", this.tbxIDActivity.Text, this.tbxIDActivityJoin.Text, theDateJoin,this.tbxIDActivity.Text,this.tbxOldIDSV.Text);
                 Perform(sql1);
             }
             catch (Exception)
@@ -142,6 +142,22 @@ namespace ProjectCLB
                 MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK);
             }
             cn.Close();
+        }
+
+        private void cbxOptionJoinActivity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxOptionJoinActivity.Text == "Thêm mới")
+            {
+                this.grbOldData.Hide();
+            }
+            else if (cbxOptionJoinActivity.Text == "Sửa")
+            {
+                this.grbOldData.Show();
+            }
+            else
+            {
+                this.grbOldData.Hide();
+            }
         }
     }
 }

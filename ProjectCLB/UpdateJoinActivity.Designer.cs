@@ -40,6 +40,12 @@
             this.dateJoin = new System.Windows.Forms.DateTimePicker();
             this.lbJoin1 = new System.Windows.Forms.Label();
             this.cbxOptionJoinActivity = new System.Windows.Forms.ComboBox();
+            this.grbOldData = new System.Windows.Forms.GroupBox();
+            this.lbJoin6 = new System.Windows.Forms.Label();
+            this.lbJoin5 = new System.Windows.Forms.Label();
+            this.tbxOldIDSV = new System.Windows.Forms.TextBox();
+            this.tbxOldIDActivity = new System.Windows.Forms.TextBox();
+            this.grbOldData.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnMinize
@@ -108,7 +114,7 @@
             // lbJoin2
             // 
             this.lbJoin2.AutoSize = true;
-            this.lbJoin2.Location = new System.Drawing.Point(19, 140);
+            this.lbJoin2.Location = new System.Drawing.Point(15, 88);
             this.lbJoin2.Name = "lbJoin2";
             this.lbJoin2.Size = new System.Drawing.Size(74, 13);
             this.lbJoin2.TabIndex = 22;
@@ -117,7 +123,7 @@
             // lbJoin3
             // 
             this.lbJoin3.AutoSize = true;
-            this.lbJoin3.Location = new System.Drawing.Point(19, 192);
+            this.lbJoin3.Location = new System.Drawing.Point(15, 129);
             this.lbJoin3.Name = "lbJoin3";
             this.lbJoin3.Size = new System.Drawing.Size(67, 13);
             this.lbJoin3.TabIndex = 23;
@@ -126,7 +132,7 @@
             // lbJoin4
             // 
             this.lbJoin4.AutoSize = true;
-            this.lbJoin4.Location = new System.Drawing.Point(19, 249);
+            this.lbJoin4.Location = new System.Drawing.Point(15, 167);
             this.lbJoin4.Name = "lbJoin4";
             this.lbJoin4.Size = new System.Drawing.Size(75, 13);
             this.lbJoin4.TabIndex = 24;
@@ -134,21 +140,21 @@
             // 
             // tbxIDActivity
             // 
-            this.tbxIDActivity.Location = new System.Drawing.Point(119, 137);
+            this.tbxIDActivity.Location = new System.Drawing.Point(115, 85);
             this.tbxIDActivity.Name = "tbxIDActivity";
             this.tbxIDActivity.Size = new System.Drawing.Size(200, 20);
             this.tbxIDActivity.TabIndex = 25;
             // 
             // tbxIDActivityJoin
             // 
-            this.tbxIDActivityJoin.Location = new System.Drawing.Point(119, 185);
+            this.tbxIDActivityJoin.Location = new System.Drawing.Point(115, 122);
             this.tbxIDActivityJoin.Name = "tbxIDActivityJoin";
             this.tbxIDActivityJoin.Size = new System.Drawing.Size(200, 20);
             this.tbxIDActivityJoin.TabIndex = 26;
             // 
             // dateJoin
             // 
-            this.dateJoin.Location = new System.Drawing.Point(119, 241);
+            this.dateJoin.Location = new System.Drawing.Point(115, 159);
             this.dateJoin.Name = "dateJoin";
             this.dateJoin.Size = new System.Drawing.Size(200, 20);
             this.dateJoin.TabIndex = 27;
@@ -156,7 +162,7 @@
             // lbJoin1
             // 
             this.lbJoin1.AutoSize = true;
-            this.lbJoin1.Location = new System.Drawing.Point(19, 88);
+            this.lbJoin1.Location = new System.Drawing.Point(17, 51);
             this.lbJoin1.Name = "lbJoin1";
             this.lbJoin1.Size = new System.Drawing.Size(52, 13);
             this.lbJoin1.TabIndex = 28;
@@ -166,16 +172,66 @@
             // cbxOptionJoinActivity
             // 
             this.cbxOptionJoinActivity.FormattingEnabled = true;
-            this.cbxOptionJoinActivity.Location = new System.Drawing.Point(117, 85);
+            this.cbxOptionJoinActivity.Location = new System.Drawing.Point(115, 48);
             this.cbxOptionJoinActivity.Name = "cbxOptionJoinActivity";
             this.cbxOptionJoinActivity.Size = new System.Drawing.Size(200, 21);
             this.cbxOptionJoinActivity.TabIndex = 29;
+            this.cbxOptionJoinActivity.SelectedIndexChanged += new System.EventHandler(this.cbxOptionJoinActivity_SelectedIndexChanged);
+            // 
+            // grbOldData
+            // 
+            this.grbOldData.Controls.Add(this.lbJoin6);
+            this.grbOldData.Controls.Add(this.lbJoin5);
+            this.grbOldData.Controls.Add(this.tbxOldIDSV);
+            this.grbOldData.Controls.Add(this.tbxOldIDActivity);
+            this.grbOldData.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbOldData.Location = new System.Drawing.Point(12, 196);
+            this.grbOldData.Name = "grbOldData";
+            this.grbOldData.Size = new System.Drawing.Size(310, 105);
+            this.grbOldData.TabIndex = 30;
+            this.grbOldData.TabStop = false;
+            this.grbOldData.Text = "Dữ liệu cũ";
+            // 
+            // lbJoin6
+            // 
+            this.lbJoin6.AutoSize = true;
+            this.lbJoin6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbJoin6.Location = new System.Drawing.Point(10, 66);
+            this.lbJoin6.Name = "lbJoin6";
+            this.lbJoin6.Size = new System.Drawing.Size(67, 13);
+            this.lbJoin6.TabIndex = 33;
+            this.lbJoin6.Text = "Mã sinh viên";
+            // 
+            // lbJoin5
+            // 
+            this.lbJoin5.AutoSize = true;
+            this.lbJoin5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbJoin5.Location = new System.Drawing.Point(10, 25);
+            this.lbJoin5.Name = "lbJoin5";
+            this.lbJoin5.Size = new System.Drawing.Size(45, 13);
+            this.lbJoin5.TabIndex = 32;
+            this.lbJoin5.Text = "Mã CLB";
+            // 
+            // tbxOldIDSV
+            // 
+            this.tbxOldIDSV.Location = new System.Drawing.Point(102, 66);
+            this.tbxOldIDSV.Name = "tbxOldIDSV";
+            this.tbxOldIDSV.Size = new System.Drawing.Size(208, 20);
+            this.tbxOldIDSV.TabIndex = 31;
+            // 
+            // tbxOldIDActivity
+            // 
+            this.tbxOldIDActivity.Location = new System.Drawing.Point(102, 18);
+            this.tbxOldIDActivity.Name = "tbxOldIDActivity";
+            this.tbxOldIDActivity.Size = new System.Drawing.Size(208, 20);
+            this.tbxOldIDActivity.TabIndex = 30;
             // 
             // UpdateJoinActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(329, 378);
+            this.Controls.Add(this.grbOldData);
             this.Controls.Add(this.cbxOptionJoinActivity);
             this.Controls.Add(this.lbJoin1);
             this.Controls.Add(this.dateJoin);
@@ -193,6 +249,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateJoinActivity";
             this.Load += new System.EventHandler(this.UpdateJoinActivity_Load);
+            this.grbOldData.ResumeLayout(false);
+            this.grbOldData.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +270,10 @@
         private System.Windows.Forms.DateTimePicker dateJoin;
         private System.Windows.Forms.Label lbJoin1;
         private System.Windows.Forms.ComboBox cbxOptionJoinActivity;
+        private System.Windows.Forms.GroupBox grbOldData;
+        private System.Windows.Forms.Label lbJoin6;
+        private System.Windows.Forms.Label lbJoin5;
+        private System.Windows.Forms.TextBox tbxOldIDSV;
+        private System.Windows.Forms.TextBox tbxOldIDActivity;
     }
 }

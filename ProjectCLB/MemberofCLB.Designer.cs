@@ -42,12 +42,18 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.tbxMemberJoin = new System.Windows.Forms.TextBox();
             this.tbxMemberCLB = new System.Windows.Forms.TextBox();
+            this.grOldData = new System.Windows.Forms.GroupBox();
+            this.lbMember7 = new System.Windows.Forms.Label();
+            this.lbMember6 = new System.Windows.Forms.Label();
+            this.tbxOldIDStudent = new System.Windows.Forms.TextBox();
+            this.tbxOldIDCLB = new System.Windows.Forms.TextBox();
+            this.grOldData.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbMember1
             // 
             this.lbMember1.AutoSize = true;
-            this.lbMember1.Location = new System.Drawing.Point(33, 90);
+            this.lbMember1.Location = new System.Drawing.Point(33, 46);
             this.lbMember1.Name = "lbMember1";
             this.lbMember1.Size = new System.Drawing.Size(52, 13);
             this.lbMember1.TabIndex = 0;
@@ -56,25 +62,25 @@
             // lbMember2
             // 
             this.lbMember2.AutoSize = true;
-            this.lbMember2.Location = new System.Drawing.Point(33, 135);
+            this.lbMember2.Location = new System.Drawing.Point(33, 91);
             this.lbMember2.Name = "lbMember2";
-            this.lbMember2.Size = new System.Drawing.Size(61, 13);
+            this.lbMember2.Size = new System.Drawing.Size(67, 13);
             this.lbMember2.TabIndex = 1;
-            this.lbMember2.Text = "Thành viên";
+            this.lbMember2.Text = "Mã sinh viên";
             // 
             // lbMember3
             // 
             this.lbMember3.AutoSize = true;
-            this.lbMember3.Location = new System.Drawing.Point(33, 187);
+            this.lbMember3.Location = new System.Drawing.Point(33, 143);
             this.lbMember3.Name = "lbMember3";
-            this.lbMember3.Size = new System.Drawing.Size(58, 13);
+            this.lbMember3.Size = new System.Drawing.Size(45, 13);
             this.lbMember3.TabIndex = 2;
-            this.lbMember3.Text = "Câu lạc bộ";
+            this.lbMember3.Text = "Mã CLB";
             // 
             // lbMember4
             // 
             this.lbMember4.AutoSize = true;
-            this.lbMember4.Location = new System.Drawing.Point(33, 235);
+            this.lbMember4.Location = new System.Drawing.Point(33, 191);
             this.lbMember4.Name = "lbMember4";
             this.lbMember4.Size = new System.Drawing.Size(75, 13);
             this.lbMember4.TabIndex = 3;
@@ -83,7 +89,7 @@
             // lbMember5
             // 
             this.lbMember5.AutoSize = true;
-            this.lbMember5.Location = new System.Drawing.Point(33, 282);
+            this.lbMember5.Location = new System.Drawing.Point(33, 238);
             this.lbMember5.Name = "lbMember5";
             this.lbMember5.Size = new System.Drawing.Size(46, 13);
             this.lbMember5.TabIndex = 4;
@@ -92,21 +98,22 @@
             // cbxMemberOption
             // 
             this.cbxMemberOption.FormattingEnabled = true;
-            this.cbxMemberOption.Location = new System.Drawing.Point(138, 90);
+            this.cbxMemberOption.Location = new System.Drawing.Point(138, 46);
             this.cbxMemberOption.Name = "cbxMemberOption";
             this.cbxMemberOption.Size = new System.Drawing.Size(208, 21);
             this.cbxMemberOption.TabIndex = 5;
+            this.cbxMemberOption.SelectedIndexChanged += new System.EventHandler(this.cbxMemberOption_SelectedIndexChanged);
             // 
             // dateFrom
             // 
-            this.dateFrom.Location = new System.Drawing.Point(138, 235);
+            this.dateFrom.Location = new System.Drawing.Point(138, 191);
             this.dateFrom.Name = "dateFrom";
             this.dateFrom.Size = new System.Drawing.Size(208, 20);
             this.dateFrom.TabIndex = 8;
             // 
             // dateTo
             // 
-            this.dateTo.Location = new System.Drawing.Point(138, 282);
+            this.dateTo.Location = new System.Drawing.Point(138, 238);
             this.dateTo.Name = "dateTo";
             this.dateTo.Size = new System.Drawing.Size(208, 20);
             this.dateTo.TabIndex = 9;
@@ -120,7 +127,7 @@
             this.UbtnClose.ForeColor = System.Drawing.Color.White;
             this.UbtnClose.Image = global::ProjectCLB.Properties.Resources.logout;
             this.UbtnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UbtnClose.Location = new System.Drawing.Point(209, 332);
+            this.UbtnClose.Location = new System.Drawing.Point(209, 384);
             this.UbtnClose.Name = "UbtnClose";
             this.UbtnClose.Size = new System.Drawing.Size(98, 38);
             this.UbtnClose.TabIndex = 21;
@@ -138,7 +145,7 @@
             this.UbtnSave.ForeColor = System.Drawing.Color.White;
             this.UbtnSave.Image = global::ProjectCLB.Properties.Resources.saved;
             this.UbtnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UbtnSave.Location = new System.Drawing.Point(49, 332);
+            this.UbtnSave.Location = new System.Drawing.Point(49, 384);
             this.UbtnSave.Name = "UbtnSave";
             this.UbtnSave.Size = new System.Drawing.Size(98, 38);
             this.UbtnSave.TabIndex = 20;
@@ -176,23 +183,72 @@
             // 
             // tbxMemberJoin
             // 
-            this.tbxMemberJoin.Location = new System.Drawing.Point(138, 135);
+            this.tbxMemberJoin.Location = new System.Drawing.Point(138, 91);
             this.tbxMemberJoin.Name = "tbxMemberJoin";
             this.tbxMemberJoin.Size = new System.Drawing.Size(208, 20);
             this.tbxMemberJoin.TabIndex = 24;
             // 
             // tbxMemberCLB
             // 
-            this.tbxMemberCLB.Location = new System.Drawing.Point(138, 179);
+            this.tbxMemberCLB.Location = new System.Drawing.Point(138, 135);
             this.tbxMemberCLB.Name = "tbxMemberCLB";
             this.tbxMemberCLB.Size = new System.Drawing.Size(208, 20);
             this.tbxMemberCLB.TabIndex = 25;
+            // 
+            // grOldData
+            // 
+            this.grOldData.Controls.Add(this.lbMember7);
+            this.grOldData.Controls.Add(this.lbMember6);
+            this.grOldData.Controls.Add(this.tbxOldIDStudent);
+            this.grOldData.Controls.Add(this.tbxOldIDCLB);
+            this.grOldData.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grOldData.Location = new System.Drawing.Point(36, 264);
+            this.grOldData.Name = "grOldData";
+            this.grOldData.Size = new System.Drawing.Size(310, 105);
+            this.grOldData.TabIndex = 26;
+            this.grOldData.TabStop = false;
+            this.grOldData.Text = "Dữ liệu cũ";
+            // 
+            // lbMember7
+            // 
+            this.lbMember7.AutoSize = true;
+            this.lbMember7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMember7.Location = new System.Drawing.Point(10, 66);
+            this.lbMember7.Name = "lbMember7";
+            this.lbMember7.Size = new System.Drawing.Size(67, 13);
+            this.lbMember7.TabIndex = 33;
+            this.lbMember7.Text = "Mã sinh viên";
+            // 
+            // lbMember6
+            // 
+            this.lbMember6.AutoSize = true;
+            this.lbMember6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMember6.Location = new System.Drawing.Point(10, 25);
+            this.lbMember6.Name = "lbMember6";
+            this.lbMember6.Size = new System.Drawing.Size(45, 13);
+            this.lbMember6.TabIndex = 32;
+            this.lbMember6.Text = "Mã CLB";
+            // 
+            // tbxOldIDStudent
+            // 
+            this.tbxOldIDStudent.Location = new System.Drawing.Point(102, 66);
+            this.tbxOldIDStudent.Name = "tbxOldIDStudent";
+            this.tbxOldIDStudent.Size = new System.Drawing.Size(208, 20);
+            this.tbxOldIDStudent.TabIndex = 31;
+            // 
+            // tbxOldIDCLB
+            // 
+            this.tbxOldIDCLB.Location = new System.Drawing.Point(102, 18);
+            this.tbxOldIDCLB.Name = "tbxOldIDCLB";
+            this.tbxOldIDCLB.Size = new System.Drawing.Size(208, 20);
+            this.tbxOldIDCLB.TabIndex = 30;
             // 
             // MemberofCLB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 393);
+            this.ClientSize = new System.Drawing.Size(380, 452);
+            this.Controls.Add(this.grOldData);
             this.Controls.Add(this.tbxMemberCLB);
             this.Controls.Add(this.tbxMemberJoin);
             this.Controls.Add(this.btnMinize);
@@ -212,6 +268,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MemberofCLB";
             this.Load += new System.EventHandler(this.MemberofCLB_Load);
+            this.grOldData.ResumeLayout(false);
+            this.grOldData.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,5 +291,10 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TextBox tbxMemberJoin;
         private System.Windows.Forms.TextBox tbxMemberCLB;
+        private System.Windows.Forms.GroupBox grOldData;
+        private System.Windows.Forms.Label lbMember7;
+        private System.Windows.Forms.Label lbMember6;
+        private System.Windows.Forms.TextBox tbxOldIDStudent;
+        private System.Windows.Forms.TextBox tbxOldIDCLB;
     }
 }

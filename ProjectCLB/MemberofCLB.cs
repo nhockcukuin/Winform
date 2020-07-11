@@ -52,6 +52,7 @@ namespace ProjectCLB
             this.cbxMemberOption.Items.Add("Xóa");
             this.cbxMemberOption.Items.Add("Sửa");
             this.cbxMemberOption.SelectedIndex = cbxMemberOption.FindString("Thêm mới");
+            
         }
         void AddMember()
         {
@@ -93,7 +94,7 @@ namespace ProjectCLB
                 String theDateFrom = dateFrom.Value.ToShortDateString();
                 String theDateTo = dateTo.Value.ToShortDateString();
                 //New data
-                string sql1 = string.Format("update THAMGIACLB set MACLB='{0}',MASV='{1}',NGAYTHAMGIA='{2}',NGAYROI='{3}'", this.tbxMemberCLB.Text, this.tbxMemberJoin.Text, theDateFrom, theDateTo);
+                string sql1 = string.Format("update THAMGIACLB set MACLB='{0}',MASV='{1}',NGAYTHAMGIA='{2}',NGAYROI='{3}' where MACLB = '{4}' and MASV='{5}'", this.tbxMemberCLB.Text, this.tbxMemberJoin.Text, theDateFrom, theDateTo, this.tbxOldIDCLB.Text, this.tbxOldIDStudent.Text);
                 Perform(sql1);
             }
             catch (Exception)
@@ -139,6 +140,22 @@ namespace ProjectCLB
         private void UbtnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cbxMemberOption_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxMemberOption.Text == "Thêm mới")
+            {
+                this.grOldData.Hide();
+            }
+            else if (cbxMemberOption.Text == "Sửa")
+            {
+                this.grOldData.Show();
+            }
+            else
+            {
+                this.grOldData.Hide();
+            }
         }
     }
 }
